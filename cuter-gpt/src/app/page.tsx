@@ -1,10 +1,10 @@
 "use client";
-import React from "react"; 
+import React from "react";
 import { useChat } from "ai/react";
 
 export default function Home() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
-  
+
   return (
     <div>
       {messages.map((message) => (
@@ -14,9 +14,9 @@ export default function Home() {
       ))}
       <form onSubmit={handleSubmit}>
         <input
-          type="text" 
+          type="text"
           value={input}
-          onChange={handleInputChange} 
+          onChange={handleInputChange}
           placeholder="Enter text"
         />
         <button type="submit">Send</button>

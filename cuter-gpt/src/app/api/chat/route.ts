@@ -3,7 +3,7 @@ import { Configuration, OpenAIApi } from "openai-edge";
 import { OpenAIStream, StreamingTextResponse } from "ai";
 export const runtime = "edge";
 const config = new Configuration({
-  apiKey: process.env.OPENAI_KEY!
+  apiKey: process.env.OPENAI_KEY!,
 });
 
 const openai = new OpenAIApi(config);
@@ -14,7 +14,7 @@ export async function POST(req: Request) {
 
   const response = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
-    messages:messages,
+    messages: messages,
     stream: true,
   });
   console.log(response);
