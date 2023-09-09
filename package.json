@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ai": "^2.2.12",
+    "openai-edge": "^1.2.2"
+  }
+}
