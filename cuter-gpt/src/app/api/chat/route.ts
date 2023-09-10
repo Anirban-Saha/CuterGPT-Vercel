@@ -1,4 +1,4 @@
-// endpoint /api/chat
+// endpoint: /api/chat
 import { Configuration, OpenAIApi } from "openai-edge";
 import { OpenAIStream, StreamingTextResponse } from "ai";
 export const runtime = "edge";
